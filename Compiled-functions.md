@@ -1,3 +1,5 @@
+# Compiled functions
+
 compiled repository的数据处理流程可以做到数据类型无关的(除了封装的`Result`哈，ps:就是说泛型呗)。 在实践中, 很常见的list数据处理(比如 RecyclerView中)。尤其像下面这种典型的从网络下载list数据的处理流:
 
 1. 下载数据:byte[]类型;
