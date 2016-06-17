@@ -1,6 +1,6 @@
 # Observables and updatables
 
-如[上一篇](reactive-programming.md)所讲, 
+如[上一篇](Reactive-programming.md)所讲, 
 被观察者(Observable)作为事件源，观察者(updatable)监听(观察)事件。   
 
 注册观察者(Updatable)方法：`Observable.addUpdatable(Updatable)`  

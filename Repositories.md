@@ -1,6 +1,6 @@
 # Repositories
 
-如[[上一篇](observables-and-updatables.md)所讲, 
+如[[上一篇](Observables-and-updatables.md)所讲, 
 `Repository`是一个被观察者(Observable)，可以提供数据，还可以定义在提供数据发生变化时的事件。 
 
 获取数据方法：`Repository.get()`.
