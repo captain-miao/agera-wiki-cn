@@ -1,8 +1,11 @@
+# Reactive programming
+
 Agera 使用著名的 _观察者模式_ 作为响应式编程的驱动机制。
 被观察者(observable)实现`Observable`接口， 并向所有注册的观察者们(observers)广播事件。
 观察者(observer)实现`Updatable`接口, 可以注册和注销到`Observable`中，接受通知事件触发更新操作，故此命名为`Updatable`。
 
 ### `Observable`
+
 ```
 public interface Observable {
 
@@ -11,7 +14,9 @@ public interface Observable {
   void removeUpdatable(@NonNull Updatable updatable);
 }
 ```
+
 ### `observer`  
+
 ```
 public interface Updatable {
 
@@ -21,7 +26,7 @@ public interface Updatable {
 
 接下来的文档中，将用_observable_和_updatable_来表示被观察者和观察者对象。
 
-# Push event, pull data
+## Push event, pull data
 
 Agera 使用 _push event, pull data_ 模型(推送事件,拉取数据)。
 push event：被观察者只做事件通知，不携带任何数据;
@@ -29,6 +34,7 @@ pull data：观察者根据自己需要从数据仓库(Repository.get())拉取�
 
 这种 _push event, pull data_ 模型, 观察者就不需要提供数据了(ps:通常意义上的观察者模式是支持携带数据和不携带数据的), 可以封装简单的事件，
 比如 按钮点击事件，下拉刷新触发事件，一个同步信号(比如:谷歌推送(GCM)消息到app)等。  
+
 ```
     // push event
     mObservable = new OnClickObservable() {
@@ -54,12 +60,14 @@ pull data：观察者根据自己需要从数据仓库(Repository.get())拉取�
 这是特意设计的: 因为大多数情况下(尤其更新app UI), 本来就只需要关心最新的数据。 
 
 一个典型Agera风格的响应式Client由以下几部分组成：
+
 * 向Observables注册一个Updatable，用于事件通知;
 * 可直接调用update，来初始化或更改Client状态;
 * 等待Observables的通知，拉取最新的数据来更新Client;
 * 当不需要事件了，需要向Observables注销updatable，释放资源。
 
 ps: 一个Repository的定义
+
 ```
     // 数据提供者 text color Supplier
     Supplier<Integer> supplier = new Supplier<Integer>() {
