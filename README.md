@@ -1,10 +1,12 @@
 # Agera Wiki 中文版  
 
-Google Agera Wiki  
+Google Agera Wiki(official)  
 
 > https://github.com/google/agera/wiki
 
-> Agera使用例子的Github：https://github.com/captain-miao/AndroidAgeraTutorial
+Agera例子GitHub
+
+> https://github.com/captain-miao/AndroidAgeraTutorial
 
 ![Agera](images/agera.png)
 
@@ -170,4 +172,7 @@ public interface Repository<T> extends Observable, Supplier<T> {
 > 翻译为：什么时候(时机)，什么线程上[执行]，什么数据       
 
 ### compiled repository
-> 翻译为：编译数据仓库    
+> 翻译为：编译数据仓库   
+
+### compiled functions
+> 翻译为：编译函数    
