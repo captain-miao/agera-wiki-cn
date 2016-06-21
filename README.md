@@ -1,14 +1,12 @@
 # Agera Wiki 中文版  
 
-Google Agera Wiki(official)  
+![Agera](images/agera.png)
+
+Google Agera Wiki  
 
 > https://github.com/google/agera/wiki
 
-Agera例子GitHub
-
-> https://github.com/captain-miao/AndroidAgeraTutorial
-
-![Agera](images/agera.png)
+> Agera使用例子的Github：https://github.com/captain-miao/AndroidAgeraTutorial
 
 Agera(瑞典文的意思是"采取行动")是一个超轻量级的Android库，帮助Android应用中有生命周期的组件(比如:Activities)或者组件中的对象(比如:Views)预准备数据。 
 通过加入函数式响应式编程，Agera可以在 _什么时机_, _什么线程_ 和 _什么数据_ 层面上更清晰的分离数据处理流程，并且使用一个接近自然语言的单个表达式就能编写一个复杂的异步流。
@@ -172,7 +170,4 @@ public interface Repository<T> extends Observable, Supplier<T> {
 > 翻译为：什么时候(时机)，什么线程上[执行]，什么数据       
 
 ### compiled repository
-> 翻译为：编译数据仓库   
-
-### compiled functions
-> 翻译为：编译函数    
+> 翻译为：编译数据仓库    
